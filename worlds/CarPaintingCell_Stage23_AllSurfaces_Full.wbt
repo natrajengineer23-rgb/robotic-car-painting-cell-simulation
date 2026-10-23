@@ -1,0 +1,5997 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/universal_robots/protos/UR5e.proto"
+
+WorldInfo {
+  info [
+    "Stage 22: Visible, quality-gated blue side-panel coating driven by concurrent UR5e robots. No real paint fluid."
+  ]
+  title "Stage 23: Dual UR5e + Overhead Gantry (Full)"
+}
+Viewpoint {
+  fieldOfView 0.93
+  orientation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0944
+  position 0.2401736133633744 -0.004864207195779113 12.536613675679467
+  far 100
+}
+Background {
+  skyColor [
+    0.79 0.85 0.94
+  ]
+}
+DirectionalLight {
+  ambientIntensity 0.45
+  direction -0.45 0.25 -1
+  intensity 1.6
+}
+DEF PAINT_CELL_FLOOR Solid {
+  children [
+    Pose {
+      translation 0 0 -0.08
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.26 0.3
+            roughness 0.95
+            metalness 0
+          }
+          geometry Box {
+            size 12 8 0.16
+          }
+        }
+      ]
+    }
+  ]
+  name "Paint_cell_floor"
+  boundingObject Pose {
+    translation 0 0 -0.08
+    children [
+      Box {
+        size 12 8 0.16
+      }
+    ]
+  }
+}
+DEF PAINT_CELL_MARKINGS Solid {
+  children [
+    Pose {
+      translation 0 0 0.007
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.26 0.3 0.34
+            roughness 0.96
+            metalness 0
+          }
+          geometry Box {
+            size 8.2 3.6 0.013
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -1.83 0.017
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.96 0.76 0.16
+            roughness 0.8
+            metalness 0
+          }
+          geometry Box {
+            size 8.1 0.045 0.013
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 1.83 0.017
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.96 0.76 0.16
+            roughness 0.8
+            metalness 0
+          }
+          geometry Box {
+            size 8.1 0.045 0.013
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -4.07 0 0.017
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.96 0.76 0.16
+            roughness 0.8
+            metalness 0
+          }
+          geometry Box {
+            size 0.045 3.66 0.013
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 4.07 0 0.017
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.96 0.76 0.16
+            roughness 0.8
+            metalness 0
+          }
+          geometry Box {
+            size 0.045 3.66 0.013
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -2.65 0.021
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.13 0.17 0.21
+            roughness 0.5
+            metalness 0.2
+          }
+          geometry Box {
+            size 8 0.28 0.03
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -2.48 0.042
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.85 0.87 0.9
+            roughness 0.4
+            metalness 0.2
+          }
+          geometry Box {
+            size 8 0.048 0.013
+          }
+        }
+      ]
+    }
+  ]
+  name "Paint_zone_floor_markings"
+}
+DEF BOOTH_FRAME Solid {
+  children [
+    Pose {
+      translation -5.5 -3.55 1.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.55 0.63 0.7
+            roughness 0.35
+            metalness 0.55
+          }
+          geometry Box {
+            size 0.14 0.14 2.9
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -5.5 3.55 1.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.55 0.63 0.7
+            roughness 0.35
+            metalness 0.55
+          }
+          geometry Box {
+            size 0.14 0.14 2.9
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 5.5 -3.55 1.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.55 0.63 0.7
+            roughness 0.35
+            metalness 0.55
+          }
+          geometry Box {
+            size 0.14 0.14 2.9
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 5.5 3.55 1.45
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.55 0.63 0.7
+            roughness 0.35
+            metalness 0.55
+          }
+          geometry Box {
+            size 0.14 0.14 2.9
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -3.55 2.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.55 0.63 0.7
+            roughness 0.35
+            metalness 0.55
+          }
+          geometry Box {
+            size 11.1 0.14 0.14
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 3.55 2.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.55 0.63 0.7
+            roughness 0.35
+            metalness 0.55
+          }
+          geometry Box {
+            size 11.1 0.14 0.14
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -5.5 0 2.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.55 0.63 0.7
+            roughness 0.35
+            metalness 0.55
+          }
+          geometry Box {
+            size 0.14 7.2 0.14
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 5.5 0 2.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.55 0.63 0.7
+            roughness 0.35
+            metalness 0.55
+          }
+          geometry Box {
+            size 0.14 7.2 0.14
+          }
+        }
+      ]
+    }
+  ]
+  name "Painting_booth_safety_frame"
+}
+DEF VEHICLE Solid {
+  children [
+    Pose {
+      translation 0 0 0.82
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.78 0.11 0.15
+            roughness 0.33
+            metalness 0.6
+          }
+          geometry Box {
+            size 4.8 1.9 0.62
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -0.24 0 1.375
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.78 0.11 0.15
+            roughness 0.32
+            metalness 0.55
+          }
+          geometry Box {
+            size 2.35 1.75 0.45
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -0.22 0 1.57
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.78 0.11 0.15
+            roughness 0.27
+            metalness 0.55
+          }
+          geometry Box {
+            size 2.15 1.78 0.06
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 2.36 0 0.62
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.08 0.1 0.13
+            roughness 0.6
+            metalness 0
+          }
+          geometry Box {
+            size 0.07 1.5 0.16
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 2.385 0 0.9
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.08 0.1 0.13
+            roughness 0.55
+            metalness 0
+          }
+          geometry Box {
+            size 0.018 0.83 0.24
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 2.385 -0.65 1.02
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.96 0.93 0.75
+            roughness 0.3
+            metalness 0
+          }
+          geometry Box {
+            size 0.03 0.26 0.13
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 2.385 0.65 1.02
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.96 0.93 0.75
+            roughness 0.3
+            metalness 0
+          }
+          geometry Box {
+            size 0.03 0.26 0.13
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -2.385 -0.71 1
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.85 0.06 0.08
+            roughness 0.25
+            metalness 0
+          }
+          geometry Box {
+            size 0.03 0.28 0.13
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -2.385 0.71 1
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.85 0.06 0.08
+            roughness 0.25
+            metalness 0
+          }
+          geometry Box {
+            size 0.03 0.28 0.13
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 1.01 0 1.32
+      rotation 0 1 0 0.4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.09 0.22 0.33
+            roughness 0.16
+            metalness 0.17
+          }
+          geometry Box {
+            size 0.023 1.61 0.41
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -1.5 0 1.31
+      rotation 0 1 0 -0.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.09 0.22 0.33
+            roughness 0.16
+            metalness 0.17
+          }
+          geometry Box {
+            size 0.023 1.61 0.4
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -0.25 -0.887 1.36
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.09 0.22 0.33
+            roughness 0.16
+            metalness 0.16
+          }
+          geometry Box {
+            size 1.93 0.018 0.31
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -0.25 0.887 1.36
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.09 0.22 0.33
+            roughness 0.16
+            metalness 0.16
+          }
+          geometry Box {
+            size 1.93 0.018 0.31
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.1 -0.904 1.35
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.78 0.11 0.15
+            roughness 0.28
+            metalness 0.4
+          }
+          geometry Box {
+            size 0.045 0.04 0.39
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.1 0.904 1.35
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.78 0.11 0.15
+            roughness 0.28
+            metalness 0.4
+          }
+          geometry Box {
+            size 0.045 0.04 0.39
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.2 -0.933 0.99
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.08 0.1 0.13
+            roughness 0.6
+            metalness 0
+          }
+          geometry Box {
+            size 0.23 0.03 0.04
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -0.88 -0.933 0.99
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.08 0.1 0.13
+            roughness 0.6
+            metalness 0
+          }
+          geometry Box {
+            size 0.23 0.03 0.04
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.2 0.933 0.99
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.08 0.1 0.13
+            roughness 0.6
+            metalness 0
+          }
+          geometry Box {
+            size 0.23 0.03 0.04
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -0.88 0.933 0.99
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.08 0.1 0.13
+            roughness 0.6
+            metalness 0
+          }
+          geometry Box {
+            size 0.23 0.03 0.04
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -1.54 -0.82 0.352
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.048 0.055 0.066
+            roughness 0.9
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.2
+            radius 0.338
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -1.54 -0.926 0.352
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.62 0.65 0.67
+            roughness 0.3
+            metalness 0.7
+          }
+          geometry Cylinder {
+            height 0.012
+            radius 0.18
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -1.54 0.82 0.352
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.048 0.055 0.066
+            roughness 0.9
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.2
+            radius 0.338
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -1.54 0.926 0.352
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.62 0.65 0.67
+            roughness 0.3
+            metalness 0.7
+          }
+          geometry Cylinder {
+            height 0.012
+            radius 0.18
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 1.54 -0.82 0.352
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.048 0.055 0.066
+            roughness 0.9
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.2
+            radius 0.338
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 1.54 -0.926 0.352
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.62 0.65 0.67
+            roughness 0.3
+            metalness 0.7
+          }
+          geometry Cylinder {
+            height 0.012
+            radius 0.18
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 1.54 0.82 0.352
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.048 0.055 0.066
+            roughness 0.9
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.2
+            radius 0.338
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 1.54 0.926 0.352
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.62 0.65 0.67
+            roughness 0.3
+            metalness 0.7
+          }
+          geometry Cylinder {
+            height 0.012
+            radius 0.18
+          }
+        }
+      ]
+    }
+  ]
+  name "Vehicle_4.8m_x_1.9m_x_1.6m"
+  boundingObject Group {
+    children [
+      Pose {
+        translation 0 0 0.82
+        children [
+          Box {
+            size 4.8 1.9 0.62
+          }
+        ]
+      }
+      Pose {
+        translation -0.24 0 1.375
+        children [
+          Box {
+            size 2.35 1.75 0.45
+          }
+        ]
+      }
+    ]
+  }
+}
+DEF LINEAR_RAIL_GUIDE Solid {
+  children [
+    Pose {
+      translation 0 1.55 0.035
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.13 0.15 0.19
+            roughness 0.4
+            metalness 0.65
+          }
+          geometry Box {
+            size 9 0.77 0.07
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 1.79 0.085
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.68 0.74 0.79
+            roughness 0.28
+            metalness 0.85
+          }
+          geometry Box {
+            size 8.8 0.085 0.105
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 1.31 0.085
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.68 0.74 0.79
+            roughness 0.28
+            metalness 0.85
+          }
+          geometry Box {
+            size 8.8 0.085 0.105
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -4.4 1.55 0.15
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.66 0.1
+            roughness 0.65
+            metalness 0
+          }
+          geometry Box {
+            size 0.12 0.9 0.22
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 4.4 1.55 0.15
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.66 0.1
+            roughness 0.65
+            metalness 0
+          }
+          geometry Box {
+            size 0.12 0.9 0.22
+          }
+        }
+      ]
+    }
+  ]
+  name "Stage11_far_linear_rail_reference"
+}
+DEF STAGE5_REFERENCE_WAYPOINTS Solid {
+  children [
+    Pose {
+      translation 1.8 1.2 0.68
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.91 0.48
+            roughness 0.4
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.031
+            subdivision 3
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 1.7 1.2 0.68
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.91 0.48
+            roughness 0.4
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.031
+            subdivision 3
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 1.6 1.2 0.68
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.91 0.48
+            roughness 0.4
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.031
+            subdivision 3
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 1.6 1.2 0.85
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.91 0.48
+            roughness 0.4
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.031
+            subdivision 3
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 1.7 1.2 0.85
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.91 0.48
+            roughness 0.4
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.031
+            subdivision 3
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 1.8 1.2 0.85
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.91 0.48
+            roughness 0.4
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.031
+            subdivision 3
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.25 1.2 0.68
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.23 0.77 1
+            roughness 0.4
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.031
+            subdivision 3
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.15 1.2 0.68
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.23 0.77 1
+            roughness 0.4
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.031
+            subdivision 3
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.05 1.2 0.68
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.23 0.77 1
+            roughness 0.4
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.031
+            subdivision 3
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.05 1.2 0.85
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.23 0.77 1
+            roughness 0.4
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.031
+            subdivision 3
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.15 1.2 0.85
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.23 0.77 1
+            roughness 0.4
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.031
+            subdivision 3
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.25 1.2 0.85
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.23 0.77 1
+            roughness 0.4
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.031
+            subdivision 3
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -1.3 1.2 0.68
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.72 0.23
+            roughness 0.4
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.031
+            subdivision 3
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -1.4 1.2 0.68
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.72 0.23
+            roughness 0.4
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.031
+            subdivision 3
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -1.5 1.2 0.68
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.72 0.23
+            roughness 0.4
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.031
+            subdivision 3
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -1.5 1.2 0.85
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.72 0.23
+            roughness 0.4
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.031
+            subdivision 3
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -1.4 1.2 0.85
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.72 0.23
+            roughness 0.4
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.031
+            subdivision 3
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -1.3 1.2 0.85
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.72 0.23
+            roughness 0.4
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.031
+            subdivision 3
+          }
+        }
+      ]
+    }
+  ]
+  name "Stage11_far_reference_waypoints_not_painted"
+}
+DEF NEAR_LINEAR_RAIL_GUIDE Solid {
+  children [
+    Pose {
+      translation 0 -1.55 0.035
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.13 0.15 0.19
+            roughness 0.4
+            metalness 0.65
+          }
+          geometry Box {
+            size 9 0.77 0.07
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -1.79 0.085
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.68 0.74 0.79
+            roughness 0.28
+            metalness 0.85
+          }
+          geometry Box {
+            size 8.8 0.085 0.105
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -1.31 0.085
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.68 0.74 0.79
+            roughness 0.28
+            metalness 0.85
+          }
+          geometry Box {
+            size 8.8 0.085 0.105
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -4.4 -1.55 0.15
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.66 0.1
+            roughness 0.65
+            metalness 0
+          }
+          geometry Box {
+            size 0.12 0.9 0.22
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 4.4 -1.55 0.15
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.66 0.1
+            roughness 0.65
+            metalness 0
+          }
+          geometry Box {
+            size 0.12 0.9 0.22
+          }
+        }
+      ]
+    }
+  ]
+  name "Stage21_near_linear_rail_guide"
+}
+DEF FAR_RAIL_ACTUATOR Robot {
+  translation 2.5 1.55 0
+  rotation 0 0 1 3.141592653589793
+  children [
+    Emitter {
+      name "rail_to_arm"
+      channel 12
+    }
+    Receiver {
+      name "arm_to_rail"
+      channel 11
+    }
+    Emitter {
+      name "cell_stop_out"
+      channel 33
+    }
+    Receiver {
+      name "cell_stop_in"
+      channel 33
+    }
+    SliderJoint {
+      jointParameters JointParameters {
+        position 3.5000000547042736
+        axis 1 0 0
+        maxStop 3.9
+      }
+      device [
+        LinearMotor {
+          name "rail_motor"
+          maxVelocity 0.35
+          maxPosition 3.9
+          maxForce 12000
+        }
+        PositionSensor {
+          name "rail_encoder"
+        }
+      ]
+      endPoint DEF FAR_RAIL_CARRIAGE Solid {
+        translation 3.5000000547042736 0 0.175
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.2 0.25 0.31
+              roughness 0.4
+              metalness 0.48
+            }
+            geometry Box {
+              size 0.76 0.76 0.19
+            }
+          }
+          Pose {
+            translation 0 0 0.103
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0.95 0.69 0.12
+                  roughness 0.45
+                  metalness 0.27
+                }
+                geometry Box {
+                  size 0.6 0.6 0.015
+                }
+              }
+            ]
+          }
+          GPS {
+            translation 0 0 0.095
+            name "rail_carriage_gps"
+          }
+          DEF PAINT_ROBOT_FAR UR5e {
+            hidden position_0_0 -5.870448513140676e-05
+            hidden rotation_1 0 0 -1 5.870448573689904e-05
+            hidden position_1_0 -1.0999666619650892
+            hidden rotation_2 0 0.9999999999999999 0 0.47082933803491084
+            hidden position_2_0 1.7000145940304383
+            hidden rotation_3 0 1 0 1.7000145940304383
+            hidden position_3_0 -1.8999984942073658
+            hidden rotation_4 0 -1 0 0.32920249420736586
+            hidden position_4_0 -1.5700000000800614
+            hidden rotation_5 0 0 -1 1.5700000000800614
+            hidden position_5_0 -1.1029118596184162e-07
+            hidden rotation_6 0 -1 0 1.1151007970493858e-07
+            translation 0 0 0.095
+            name "stage21_far_ur5e"
+            controller "stage21_far_arm"
+            controllerArgs [
+              "--full"
+            ]
+            supervisor TRUE
+            toolSlot [
+              DEF SPRAY_NOZZLE_FAR Solid {
+                translation 0 0 0.065
+                children [
+                  Shape {
+                    appearance PBRAppearance {
+                      baseColor 0.12 0.5 0.8
+                      roughness 0.3
+                      metalness 0.4
+                    }
+                    geometry Box {
+                      size 0.07 0.07 0.13
+                    }
+                  }
+                  Pose {
+                    translation 0 0 0.085
+                    children [
+                      Shape {
+                        appearance PBRAppearance {
+                          baseColor 0.98 0.73 0.12
+                          roughness 0.4
+                          metalness 0.2
+                        }
+                        geometry Box {
+                          size 0.035 0.035 0.042
+                        }
+                      }
+                    ]
+                  }
+                  GPS {
+                    translation 0 0 0.106
+                    name "spray_tip_gps"
+                  }
+                  GPS {
+                    name "spray_axis_base_gps"
+                  }
+                  Emitter {
+                    name "arm_to_rail"
+                    channel 11
+                  }
+                  Receiver {
+                    name "rail_to_arm"
+                    channel 12
+                  }
+                ]
+                name "stage21_far_nozzle"
+              }
+            ]
+            staticBase FALSE
+          }
+        ]
+        name "stage21_far_moving_carriage"
+        boundingObject Box {
+          size 0.76 0.76 0.19
+        }
+        physics Physics {
+          density -1
+          mass 100
+        }
+        linearVelocity 5.61160521153403e-07 -1.029107828846601e-06 -7.947663324067923e-08
+        angularVelocity 6.134539458306831e-07 2.5141451888327693e-07 6.591282586526632e-07
+      }
+    }
+  ]
+  name "stage21_far_powered_axis"
+  controller "stage21_far_rail"
+  controllerArgs [
+    "--full"
+  ]
+}
+DEF NEAR_RAIL_ACTUATOR Robot {
+  translation -2.2 -1.55 0
+  children [
+    Emitter {
+      name "rail_to_arm"
+      channel 22
+    }
+    Receiver {
+      name "arm_to_rail"
+      channel 21
+    }
+    Emitter {
+      name "cell_stop_out"
+      channel 33
+    }
+    Receiver {
+      name "cell_stop_in"
+      channel 33
+    }
+    SliderJoint {
+      jointParameters JointParameters {
+        position 3.5000000547042736
+        axis 1 0 0
+        maxStop 3.9
+      }
+      device [
+        LinearMotor {
+          name "rail_motor"
+          maxVelocity 0.35
+          maxPosition 3.9
+          maxForce 12000
+        }
+        PositionSensor {
+          name "rail_encoder"
+        }
+      ]
+      endPoint DEF NEAR_RAIL_CARRIAGE Solid {
+        translation 3.5000000547042736 0 0.175
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.2 0.25 0.31
+              roughness 0.4
+              metalness 0.48
+            }
+            geometry Box {
+              size 0.76 0.76 0.19
+            }
+          }
+          Pose {
+            translation 0 0 0.103
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0.95 0.69 0.12
+                  roughness 0.45
+                  metalness 0.27
+                }
+                geometry Box {
+                  size 0.6 0.6 0.015
+                }
+              }
+            ]
+          }
+          GPS {
+            translation 0 0 0.095
+            name "rail_carriage_gps"
+          }
+          DEF PAINT_ROBOT_NEAR UR5e {
+            hidden position_0_0 -5.870448513058677e-05
+            hidden rotation_1 0 0 -1 5.870448573689904e-05
+            hidden position_1_0 -1.09996666196509
+            hidden rotation_2 0 0.9999999999999999 0 0.4708293380349099
+            hidden position_2_0 1.7000145940304379
+            hidden rotation_3 0 1 0 1.7000145940304379
+            hidden position_3_0 -1.8999984942073649
+            hidden rotation_4 0 -1 0 0.3292024942073645
+            hidden position_4_0 -1.5700000000800625
+            hidden rotation_5 0 0 -1 1.5700000000800627
+            hidden position_5_0 -1.1029118491121681e-07
+            hidden rotation_6 0 -1 0 1.1151007970493858e-07
+            translation 0 0 0.095
+            name "stage21_near_ur5e"
+            controller "stage21_near_arm"
+            controllerArgs [
+              "--full"
+            ]
+            supervisor TRUE
+            toolSlot [
+              DEF SPRAY_NOZZLE_NEAR Solid {
+                translation 0 0 0.065
+                children [
+                  Shape {
+                    appearance PBRAppearance {
+                      baseColor 0.12 0.5 0.8
+                      roughness 0.3
+                      metalness 0.4
+                    }
+                    geometry Box {
+                      size 0.07 0.07 0.13
+                    }
+                  }
+                  Pose {
+                    translation 0 0 0.085
+                    children [
+                      Shape {
+                        appearance PBRAppearance {
+                          baseColor 0.98 0.73 0.12
+                          roughness 0.4
+                          metalness 0.2
+                        }
+                        geometry Box {
+                          size 0.035 0.035 0.042
+                        }
+                      }
+                    ]
+                  }
+                  GPS {
+                    translation 0 0 0.106
+                    name "spray_tip_gps"
+                  }
+                  GPS {
+                    name "spray_axis_base_gps"
+                  }
+                  Emitter {
+                    name "arm_to_rail"
+                    channel 21
+                  }
+                  Receiver {
+                    name "rail_to_arm"
+                    channel 22
+                  }
+                ]
+                name "stage21_near_nozzle"
+              }
+            ]
+            staticBase FALSE
+          }
+        ]
+        name "stage21_near_moving_carriage"
+        boundingObject Box {
+          size 0.76 0.76 0.19
+        }
+        physics Physics {
+          density -1
+          mass 100
+        }
+        linearVelocity -5.611605127181514e-07 1.0291078284230763e-06 -7.947663320569865e-08
+        angularVelocity -6.13453945808627e-07 -2.5141451901551593e-07 6.591282586251804e-07
+      }
+    }
+  ]
+  name "stage21_near_powered_axis"
+  controller "stage21_near_rail"
+  controllerArgs [
+    "--full"
+  ]
+}
+DEF STAGE23_OVERHEAD_GUIDES Solid {
+  children [
+    Pose {
+      translation 0 -0.83 2.5
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.29 0.37 0.44
+            roughness 0.35
+            metalness 0.7
+          }
+          geometry Box {
+            size 6.15 0.065 0.07
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0.83 2.5
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.29 0.37 0.44
+            roughness 0.35
+            metalness 0.7
+          }
+          geometry Box {
+            size 6.15 0.065 0.07
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3.1 0 2.5
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.8 0.6 0.12
+            roughness 0.55
+            metalness 0.2
+          }
+          geometry Box {
+            size 0.08 1.78 0.12
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3.1 0 2.5
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.8 0.6 0.12
+            roughness 0.55
+            metalness 0.2
+          }
+          geometry Box {
+            size 0.08 1.78 0.12
+          }
+        }
+      ]
+    }
+  ]
+  name "Stage23_overhead_fixed_guides"
+}
+DEF STAGE23_OVERHEAD_GANTRY Robot {
+  translation -2.95 -0.7 2.5
+  children [
+    Receiver {
+      name "cell_stop_in"
+      channel 33
+    }
+    Emitter {
+      name "cell_stop_out"
+      channel 33
+    }
+    SliderJoint {
+      jointParameters JointParameters {
+        axis 1 0 0
+        minStop -0.05
+        maxStop 5.95
+        dampingConstant 75
+      }
+      device [
+        LinearMotor {
+          name "gantry_x_motor"
+          acceleration 1.4
+          controlPID 5 0 0.08
+          maxVelocity 0.7
+          maxPosition 5.9
+          maxForce 2200
+        }
+        PositionSensor {
+          name "gantry_x_encoder"
+        }
+      ]
+      endPoint DEF STAGE23_X_BRIDGE Solid {
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.18 0.23 0.3
+              roughness 0.4
+              metalness 0.6
+            }
+            geometry Box {
+              size 0.26 1.58 0.12
+            }
+          }
+          SliderJoint {
+            jointParameters JointParameters {
+              axis 0 1 0
+              minStop -0.05
+              maxStop 1.45
+              dampingConstant 50
+            }
+            device [
+              LinearMotor {
+                name "gantry_y_motor"
+                acceleration 1.2
+                controlPID 5 0 0.08
+                maxVelocity 0.55
+                maxPosition 1.4
+                maxForce 1200
+              }
+              PositionSensor {
+                name "gantry_y_encoder"
+              }
+            ]
+            endPoint DEF STAGE23_Y_CARRIAGE Solid {
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.88 0.65 0.11
+                    roughness 0.4
+                    metalness 0.3
+                  }
+                  geometry Box {
+                    size 0.35 0.32 0.16
+                  }
+                }
+                SliderJoint {
+                  jointParameters JointParameters {
+                    position 0.1
+                    axis 0 0 -1
+                    minStop -0.05
+                    maxStop 1.95
+                    dampingConstant 45
+                  }
+                  device [
+                    LinearMotor {
+                      name "gantry_z_motor"
+                      acceleration 0.9
+                      controlPID 5 0 0.08
+                      maxVelocity 0.45
+                      maxPosition 1.92
+                      maxForce 450
+                    }
+                    PositionSensor {
+                      name "gantry_z_encoder"
+                    }
+                  ]
+                  endPoint DEF STAGE23_Z_SLIDE Solid {
+                    translation 0 0 -0.1
+                    children [
+                      Shape {
+                        appearance PBRAppearance {
+                          baseColor 0.56 0.64 0.72
+                          roughness 0.3
+                          metalness 0.6
+                        }
+                        geometry Box {
+                          size 0.065 0.065 0.16
+                        }
+                      }
+                      HingeJoint {
+                        jointParameters HingeJointParameters {
+                          axis 0 1 0
+                          minStop -1.65
+                          maxStop 0.11
+                          dampingConstant 0.3
+                        }
+                        device [
+                          RotationalMotor {
+                            name "nozzle_tilt_motor"
+                            acceleration 1.8
+                            controlPID 5 0 0.08
+                            maxVelocity 1
+                            minPosition -1.6
+                            maxPosition 0.08
+                            maxTorque 30
+                          }
+                          PositionSensor {
+                            name "nozzle_tilt_encoder"
+                          }
+                        ]
+                        endPoint DEF STAGE23_SPRAY_HEAD Solid {
+                          rotation 0 1 0 0
+                          children [
+                            Pose {
+                              translation 0 0 -0.06
+                              children [
+                                Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0.08 0.42 0.8
+                                    roughness 0.28
+                                    metalness 0.42
+                                  }
+                                  geometry Cylinder {
+                                    height 0.12
+                                    radius 0.042
+                                  }
+                                }
+                              ]
+                            }
+                            GPS {
+                              translation 0 0 -0.12
+                              name "stage23_nozzle_tip_gps"
+                            }
+                          ]
+                          name "stage23_actuated_spray_nozzle"
+                        }
+                      }
+                    ]
+                    name "Stage23_vertical_spray_slide"
+                  }
+                }
+              ]
+              name "Stage23_Y_carriage"
+            }
+          }
+        ]
+        name "Stage23_X_bridge"
+      }
+    }
+  ]
+  name "stage23_overhead_three_axis_spray_gantry"
+  controller "stage23_overhead"
+  controllerArgs [
+    "--full"
+  ]
+  supervisor TRUE
+}
+DEF S23_ROOF_1 Transform {
+  translation -0.995 -0.66 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_2 Transform {
+  translation -0.74 -0.66 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_3 Transform {
+  translation -0.485 -0.66 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_4 Transform {
+  translation -0.23 -0.66 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_5 Transform {
+  translation 0.025 -0.66 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_6 Transform {
+  translation 0.28 -0.66 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_7 Transform {
+  translation 0.535 -0.66 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_8 Transform {
+  translation 0.79 -0.66 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_9 Transform {
+  translation 0.79 -0.396 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_10 Transform {
+  translation 0.535 -0.396 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_1 Transform {
+  translation 1.79634 0.955 0.66467
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_1 Transform {
+  translation -1.49634 -0.955 0.66467
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_ROOF_11 Transform {
+  translation 0.28 -0.396 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_12 Transform {
+  translation 0.025 -0.396 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_2 Transform {
+  translation 1.76344 0.955 0.67615
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_2 Transform {
+  translation -1.46344 -0.955 0.67615
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_ROOF_13 Transform {
+  translation -0.23 -0.396 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_14 Transform {
+  translation -0.485 -0.396 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_3 Transform {
+  translation 1.72601 0.955 0.68182
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_3 Transform {
+  translation -1.42601 -0.955 0.68182
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF S23_ROOF_15 Transform {
+  translation -0.74 -0.396 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_4 Transform {
+  translation 1.71863 0.955 0.67767
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_4 Transform {
+  translation -1.41863 -0.955 0.67767
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_ROOF_16 Transform {
+  translation -0.995 -0.396 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_17 Transform {
+  translation -0.995 -0.132 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_5 Transform {
+  translation 1.66941 0.955 0.67833
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_5 Transform {
+  translation -1.36941 -0.955 0.67833
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_6 Transform {
+  translation 1.66869 0.955 0.67794
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_6 Transform {
+  translation -1.36869 -0.955 0.67794
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_ROOF_18 Transform {
+  translation -0.74 -0.132 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_19 Transform {
+  translation -0.485 -0.132 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_7 Transform {
+  translation 1.61561 0.955 0.67807
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_8 Transform {
+  translation -1.31561 -0.955 0.67807
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_8 Transform {
+  translation 1.61561 0.955 0.67807
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_7 Transform {
+  translation -1.31561 -0.955 0.67807
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF S23_ROOF_20 Transform {
+  translation -0.23 -0.132 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_21 Transform {
+  translation 0.025 -0.132 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_9 Transform {
+  translation 1.61118 0.955 0.76498
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_10 Transform {
+  translation -1.31118 -0.955 0.76498
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_10 Transform {
+  translation 1.61118 0.955 0.76498
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_9 Transform {
+  translation -1.31118 -0.955 0.76498
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_ROOF_22 Transform {
+  translation 0.28 -0.132 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_23 Transform {
+  translation 0.535 -0.132 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_11 Transform {
+  translation 1.65792 0.955 0.7599
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_11 Transform {
+  translation -1.35792 -0.955 0.7599
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_12 Transform {
+  translation 1.66757 0.955 0.76108
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_12 Transform {
+  translation -1.36757 -0.955 0.76108
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_ROOF_24 Transform {
+  translation 0.79 -0.132 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_25 Transform {
+  translation 0.79 0.132 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_13 Transform {
+  translation 1.71989 0.955 0.75963
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_13 Transform {
+  translation -1.41989 -0.955 0.75963
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_14 Transform {
+  translation 1.72067 0.955 0.75982
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_14 Transform {
+  translation -1.42067 -0.955 0.75982
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_ROOF_26 Transform {
+  translation 0.535 0.132 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_27 Transform {
+  translation 0.28 0.132 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_15 Transform {
+  translation 1.77164 0.955 0.75956
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_16 Transform {
+  translation -1.47164 -0.955 0.75956
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_16 Transform {
+  translation 1.77164 0.955 0.75956
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_15 Transform {
+  translation -1.47164 -0.955 0.75956
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF S23_ROOF_28 Transform {
+  translation 0.025 0.132 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_29 Transform {
+  translation -0.23 0.132 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_17 Transform {
+  translation 1.81084 0.955 0.84708
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_17 Transform {
+  translation -1.51084 -0.955 0.84708
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_ROOF_30 Transform {
+  translation -0.485 0.132 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_31 Transform {
+  translation -0.74 0.132 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_18 Transform {
+  translation 1.76653 0.955 0.85152
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_18 Transform {
+  translation -1.46653 -0.955 0.85152
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_19 Transform {
+  translation 1.75655 0.955 0.84732
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_19 Transform {
+  translation -1.45655 -0.955 0.84732
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_ROOF_32 Transform {
+  translation -0.995 0.132 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_33 Transform {
+  translation -0.995 0.396 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_20 Transform {
+  translation 1.70411 0.955 0.84784
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_20 Transform {
+  translation -1.40411 -0.955 0.84784
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_21 Transform {
+  translation 1.70324 0.955 0.84742
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_21 Transform {
+  translation -1.40324 -0.955 0.84742
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_ROOF_34 Transform {
+  translation -0.74 0.396 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_35 Transform {
+  translation -0.485 0.396 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_36 Transform {
+  translation -0.23 0.396 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_22 Transform {
+  translation 1.65288 0.955 0.84766
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_23 Transform {
+  translation -1.35288 -0.955 0.84766
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_23 Transform {
+  translation 1.65288 0.955 0.84766
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_22 Transform {
+  translation -1.35288 -0.955 0.84766
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF S23_ROOF_37 Transform {
+  translation 0.025 0.396 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_38 Transform {
+  translation 0.28 0.396 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_24 Transform {
+  translation -1.30325 -0.955 0.84768
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_24 Transform {
+  translation 1.60325 0.955 0.84768
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_ROOF_39 Transform {
+  translation 0.535 0.396 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_40 Transform {
+  translation 0.79 0.396 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_41 Transform {
+  translation 0.79 0.66 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_42 Transform {
+  translation 0.535 0.66 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_43 Transform {
+  translation 0.28 0.66 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_44 Transform {
+  translation 0.025 0.66 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_45 Transform {
+  translation -0.23 0.66 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_46 Transform {
+  translation -0.485 0.66 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_47 Transform {
+  translation -0.74 0.66 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_ROOF_48 Transform {
+  translation -0.995 0.66 1.605
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.268 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_25 Transform {
+  translation 0.24635 0.955 0.66467
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_25 Transform {
+  translation 0.05365 -0.955 0.66467
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_HOOD_49 Transform {
+  translation 1.095 -0.66 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_HOOD_50 Transform {
+  translation 1.325 -0.66 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_26 Transform {
+  translation 0.2178 0.955 0.67915
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_26 Transform {
+  translation 0.0822 -0.955 0.67915
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_27 Transform {
+  translation 0.21344 0.955 0.67615
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_27 Transform {
+  translation 0.08656 -0.955 0.67615
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_HOOD_51 Transform {
+  translation 1.555 -0.66 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_28 Transform {
+  translation 0.16926 0.955 0.67808
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_28 Transform {
+  translation 0.13074 -0.955 0.67808
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_29 Transform {
+  translation 0.16862 0.955 0.67767
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_29 Transform {
+  translation 0.13138 -0.955 0.67767
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_HOOD_52 Transform {
+  translation 1.785 -0.66 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_HOOD_53 Transform {
+  translation 2.015 -0.66 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_30 Transform {
+  translation 0.11868 0.955 0.67794
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_31 Transform {
+  translation 0.18132 -0.955 0.67794
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_31 Transform {
+  translation 0.11868 0.955 0.67794
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_30 Transform {
+  translation 0.18132 -0.955 0.67794
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF S23_HOOD_54 Transform {
+  translation 2.245 -0.66 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_32 Transform {
+  translation 0.06559 0.955 0.67807
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_32 Transform {
+  translation 0.23441 -0.955 0.67807
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_HOOD_55 Transform {
+  translation 2.245 -0.396 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_33 Transform {
+  translation 0.06168 0.955 0.75041
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_33 Transform {
+  translation 0.23832 -0.955 0.75041
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_34 Transform {
+  translation 0.06118 0.955 0.76501
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_35 Transform {
+  translation 0.23882 -0.955 0.76501
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_35 Transform {
+  translation 0.06118 0.955 0.76501
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_34 Transform {
+  translation 0.23882 -0.955 0.76501
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_HOOD_56 Transform {
+  translation 2.015 -0.396 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_HOOD_57 Transform {
+  translation 1.785 -0.396 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_36 Transform {
+  translation 0.11673 0.955 0.76101
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_36 Transform {
+  translation 0.18327 -0.955 0.76101
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_37 Transform {
+  translation 0.18243 -0.955 0.76109
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_37 Transform {
+  translation 0.11757 0.955 0.76109
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_HOOD_58 Transform {
+  translation 1.555 -0.396 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_38 Transform {
+  translation 0.17068 0.955 0.75983
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_39 Transform {
+  translation 0.12932 -0.955 0.75983
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_39 Transform {
+  translation 0.17068 0.955 0.75983
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_38 Transform {
+  translation 0.12932 -0.955 0.75983
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF S23_HOOD_59 Transform {
+  translation 1.325 -0.396 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_40 Transform {
+  translation 0.22165 0.955 0.75956
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_40 Transform {
+  translation 0.07835 -0.955 0.75956
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_HOOD_60 Transform {
+  translation 1.095 -0.396 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_HOOD_61 Transform {
+  translation 1.095 -0.132 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_41 Transform {
+  translation 0.25296 0.955 0.83472
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_41 Transform {
+  translation 0.04704 -0.955 0.83472
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_42 Transform {
+  translation 0.26084 0.955 0.84708
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_42 Transform {
+  translation 0.03916 -0.955 0.84708
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_HOOD_62 Transform {
+  translation 1.325 -0.132 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_43 Transform {
+  translation 0.20743 0.955 0.84774
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_43 Transform {
+  translation 0.09257 -0.955 0.84774
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_44 Transform {
+  translation 0.09345 -0.955 0.84732
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_44 Transform {
+  translation 0.20655 0.955 0.84732
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_HOOD_63 Transform {
+  translation 1.555 -0.132 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_45 Transform {
+  translation 0.15324 0.955 0.84742
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_46 Transform {
+  translation 0.14676 -0.955 0.84742
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_46 Transform {
+  translation 0.15324 0.955 0.84742
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_45 Transform {
+  translation 0.14676 -0.955 0.84742
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF S23_HOOD_64 Transform {
+  translation 1.785 -0.132 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_HOOD_65 Transform {
+  translation 2.015 -0.132 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_47 Transform {
+  translation 0.10288 0.955 0.84766
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_47 Transform {
+  translation 0.19712 -0.955 0.84766
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_HOOD_66 Transform {
+  translation 2.245 -0.132 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_48 Transform {
+  translation 0.06127 0.955 0.85031
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_48 Transform {
+  translation 0.23873 -0.955 0.85031
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_49 Transform {
+  translation 0.05325 0.955 0.84768
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_49 Transform {
+  translation 0.24675 -0.955 0.84768
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_HOOD_67 Transform {
+  translation 2.245 0.132 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_HOOD_68 Transform {
+  translation 2.015 0.132 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_HOOD_69 Transform {
+  translation 1.785 0.132 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_HOOD_70 Transform {
+  translation 1.555 0.132 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_HOOD_71 Transform {
+  translation 1.325 0.132 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_HOOD_72 Transform {
+  translation 1.095 0.132 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_HOOD_73 Transform {
+  translation 1.095 0.396 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_HOOD_74 Transform {
+  translation 1.325 0.396 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_50 Transform {
+  translation -1.30365 0.955 0.66467
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_50 Transform {
+  translation 1.60365 -0.955 0.66467
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_HOOD_75 Transform {
+  translation 1.555 0.396 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_51 Transform {
+  translation 1.63618 -0.955 0.67645
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_51 Transform {
+  translation -1.33618 0.955 0.67645
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF S23_HOOD_76 Transform {
+  translation 1.785 0.396 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_52 Transform {
+  translation -1.33656 0.955 0.67615
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_52 Transform {
+  translation 1.63656 -0.955 0.67615
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_HOOD_77 Transform {
+  translation 2.015 0.396 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_53 Transform {
+  translation -1.38139 0.955 0.67767
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_54 Transform {
+  translation 1.68139 -0.955 0.67767
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_54 Transform {
+  translation -1.38139 0.955 0.67767
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_53 Transform {
+  translation 1.68139 -0.955 0.67767
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF S23_HOOD_78 Transform {
+  translation 2.245 0.396 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_55 Transform {
+  translation -1.43134 0.955 0.67794
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_55 Transform {
+  translation 1.73134 -0.955 0.67794
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_HOOD_79 Transform {
+  translation 2.245 0.66 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_HOOD_80 Transform {
+  translation 2.015 0.66 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_56 Transform {
+  translation 1.77552 -0.955 0.68127
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_56 Transform {
+  translation -1.47552 0.955 0.68127
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_57 Transform {
+  translation -1.48443 0.955 0.67808
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_57 Transform {
+  translation 1.78443 -0.955 0.67808
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_HOOD_81 Transform {
+  translation 1.785 0.66 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_58 Transform {
+  translation -1.48885 0.955 0.76372
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_58 Transform {
+  translation 1.78885 -0.955 0.76372
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_59 Transform {
+  translation -1.48882 0.955 0.76503
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_60 Transform {
+  translation 1.78882 -0.955 0.76503
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_60 Transform {
+  translation -1.48882 0.955 0.76503
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_59 Transform {
+  translation 1.78882 -0.955 0.76503
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_HOOD_82 Transform {
+  translation 1.555 0.66 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_61 Transform {
+  translation -1.43242 0.955 0.76109
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_62 Transform {
+  translation 1.73242 -0.955 0.76109
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_62 Transform {
+  translation -1.43242 0.955 0.76109
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_61 Transform {
+  translation 1.73242 -0.955 0.76109
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF S23_HOOD_83 Transform {
+  translation 1.325 0.66 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_HOOD_84 Transform {
+  translation 1.095 0.66 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.236 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_63 Transform {
+  translation 1.67931 -0.955 0.75983
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_63 Transform {
+  translation -1.37931 0.955 0.75983
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_64 Transform {
+  translation 1.63691 -0.955 0.75655
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_64 Transform {
+  translation -1.33691 0.955 0.75655
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_65 Transform {
+  translation -1.32835 0.955 0.75956
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_65 Transform {
+  translation 1.62835 -0.955 0.75956
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_BOOT_85 Transform {
+  translation -2.22 -0.66 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_66 Transform {
+  translation -1.28995 0.955 0.846
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_66 Transform {
+  translation 1.58995 -0.955 0.846
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_67 Transform {
+  translation -1.28916 0.955 0.84709
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_67 Transform {
+  translation 1.58916 -0.955 0.84709
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_BOOT_86 Transform {
+  translation -2.02 -0.66 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_BOOT_87 Transform {
+  translation -1.82 -0.66 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_68 Transform {
+  translation -1.34345 0.955 0.84732
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_69 Transform {
+  translation 1.64345 -0.955 0.84732
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_69 Transform {
+  translation -1.34345 0.955 0.84732
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_68 Transform {
+  translation 1.64345 -0.955 0.84732
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF S23_BOOT_88 Transform {
+  translation -1.62 -0.66 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_70 Transform {
+  translation 1.69676 -0.955 0.84742
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_70 Transform {
+  translation -1.39676 0.955 0.84742
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_BOOT_89 Transform {
+  translation -1.62 -0.396 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_71 Transform {
+  translation -1.43866 0.955 0.85087
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_71 Transform {
+  translation 1.73866 -0.955 0.85087
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_72 Transform {
+  translation -1.44712 0.955 0.84766
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_72 Transform {
+  translation 1.74712 -0.955 0.84766
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_BOOT_90 Transform {
+  translation -1.82 -0.396 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_BOOT_91 Transform {
+  translation -2.02 -0.396 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_73 Transform {
+  translation -1.49604 0.955 0.84795
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_73 Transform {
+  translation 1.79604 -0.955 0.84795
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Cylinder {
+        height 0.004
+        radius 0.051
+        subdivision 16
+      }
+    }
+  ]
+}
+DEF PAINT_NEAR_74 Transform {
+  translation 1.79675 -0.955 0.84768
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF PAINT_FAR_74 Transform {
+  translation -1.49675 0.955 0.84768
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.22
+        metalness 0.55
+      }
+      geometry Box {
+        size 0.085 0.006 0.105
+      }
+    }
+  ]
+}
+DEF S23_BOOT_92 Transform {
+  translation -2.22 -0.396 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_BOOT_93 Transform {
+  translation -2.22 -0.132 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_BOOT_94 Transform {
+  translation -2.02 -0.132 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_BOOT_95 Transform {
+  translation -1.82 -0.132 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_BOOT_96 Transform {
+  translation -1.62 -0.132 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_BOOT_97 Transform {
+  translation -1.62 0.132 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_BOOT_98 Transform {
+  translation -1.82 0.132 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_BOOT_99 Transform {
+  translation -2.02 0.132 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_BOOT_100 Transform {
+  translation -2.22 0.132 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_BOOT_101 Transform {
+  translation -2.22 0.396 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_BOOT_102 Transform {
+  translation -2.02 0.396 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_BOOT_103 Transform {
+  translation -1.82 0.396 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_BOOT_104 Transform {
+  translation -1.62 0.396 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_BOOT_105 Transform {
+  translation -1.62 0.66 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_BOOT_106 Transform {
+  translation -1.82 0.66 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_BOOT_107 Transform {
+  translation -2.02 0.66 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_BOOT_108 Transform {
+  translation -2.22 0.66 1.135
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.208 0.275 0.007
+      }
+    }
+  ]
+}
+DEF S23_TAILGATE_109 Transform {
+  translation -2.405 -0.64 0.64
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.007 0.328 0.149
+      }
+    }
+  ]
+}
+DEF S23_TAILGATE_110 Transform {
+  translation -2.405 -0.32 0.64
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.007 0.328 0.149
+      }
+    }
+  ]
+}
+DEF S23_TAILGATE_111 Transform {
+  translation -2.405 0 0.64
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.007 0.335 0.149
+      }
+    }
+  ]
+}
+DEF S23_TAILGATE_112 Transform {
+  translation -2.405 0.32 0.64
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.007 0.328 0.149
+      }
+    }
+  ]
+}
+DEF S23_TAILGATE_113 Transform {
+  translation -2.405 0.64 0.64
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.007 0.328 0.149
+      }
+    }
+  ]
+}
+DEF S23_TAILGATE_114 Transform {
+  translation -2.405 -0.64 0.78
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.007 0.328 0.149
+      }
+    }
+  ]
+}
+DEF S23_TAILGATE_115 Transform {
+  translation -2.405 -0.32 0.78
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.007 0.328 0.149
+      }
+    }
+  ]
+}
+DEF S23_TAILGATE_116 Transform {
+  translation -2.405 0 0.78
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.007 0.335 0.149
+      }
+    }
+  ]
+}
+DEF S23_TAILGATE_117 Transform {
+  translation -2.405 0.32 0.78
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.007 0.328 0.149
+      }
+    }
+  ]
+}
+DEF S23_TAILGATE_118 Transform {
+  translation -2.405 0.64 0.78
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.007 0.328 0.149
+      }
+    }
+  ]
+}
+DEF S23_TAILGATE_119 Transform {
+  translation -2.405 -0.64 0.92
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.007 0.328 0.149
+      }
+    }
+  ]
+}
+DEF S23_TAILGATE_120 Transform {
+  translation -2.405 -0.32 0.92
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.007 0.328 0.149
+      }
+    }
+  ]
+}
+DEF S23_TAILGATE_121 Transform {
+  translation -2.405 0 0.92
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.007 0.335 0.149
+      }
+    }
+  ]
+}
+DEF S23_TAILGATE_122 Transform {
+  translation -2.405 0.32 0.92
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.007 0.328 0.149
+      }
+    }
+  ]
+}
+DEF S23_TAILGATE_123 Transform {
+  translation -2.405 0.64 0.92
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.007 0.328 0.149
+      }
+    }
+  ]
+}
+DEF S23_TAILGATE_124 Transform {
+  translation -2.405 -0.64 1.06
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.007 0.328 0.13
+      }
+    }
+  ]
+}
+DEF S23_TAILGATE_125 Transform {
+  translation -2.405 -0.32 1.06
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.007 0.328 0.13
+      }
+    }
+  ]
+}
+DEF S23_TAILGATE_126 Transform {
+  translation -2.405 0 1.06
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.007 0.335 0.13
+      }
+    }
+  ]
+}
+DEF S23_TAILGATE_127 Transform {
+  translation -2.405 0.32 1.06
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.007 0.328 0.13
+      }
+    }
+  ]
+}
+DEF S23_TAILGATE_128 Transform {
+  translation -2.405 0.64 1.06
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.035 0.32 0.88
+        roughness 0.19
+        metalness 0.45
+      }
+      geometry Box {
+        size 0.007 0.328 0.13
+      }
+    }
+  ]
+}

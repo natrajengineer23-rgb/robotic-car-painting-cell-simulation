@@ -1,0 +1,4 @@
+station,target_rail_m,encoder_m,carriage_gps_x,carriage_gps_y,carriage_gps_z,painting_targets_passed,status,time_s
+1,0.4,0.4,2.1,1.55,0.2681,15,PASS,150.912
+2,1.95,1.95,0.55,1.55,0.268,15,PASS,302.688
+3,3.5,3.5,-1.0,1.55,0.2679,15,PASS,454.464

@@ -1,0 +1,15 @@
+[Stage 23] MODE: QUICK
+[Stage 23] Third painting mechanism: motorized XYZ overhead gantry + tilt; NOT a UR5e.
+[Stage 23] BLUE virtual coating only, quality-gated from actual GPS and motor encoders.
+[Stage 23] Simulated geometry with proxy approach checks; NOT certified collision safety.
+[Stage 23] COATED roof row 2 col 2
+[Stage 23] PANEL roof : qualified 9 / 9
+[Stage 23] COATED hood row 2 col 2
+[Stage 23] PANEL hood : qualified 9 / 9
+[Stage 23] COATED boot row 3 col 1
+[Stage 23] PANEL boot : qualified 6 / 6
+[Stage 23] COATED tailgate row 2 col 2
+[Stage 23] PANEL tailgate : qualified 6 / 6
+[Stage 23] FINISHED: roof=9/9 hood=9/9 boot=6/6 tailgate=6/6
+[Stage 23] LOG: /mnt/data/CarPaintingCell_Stage23_TopAndEnds/logs/overhead/stage23_overhead_quick.csv
+MOCK_CONTROLLER_PASS: painted 30/30 theoretical targets, steps 984

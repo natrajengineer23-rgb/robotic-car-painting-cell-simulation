@@ -1,0 +1,36 @@
+test_mirrored_local_grid (test_mirror_and_interlock.GeometryTests.test_mirrored_local_grid) ... ok
+test_stop_is_fail_closed (test_mirror_and_interlock.GeometryTests.test_stop_is_fail_closed) ... ok
+test_two_controllers_and_separate_buses (test_mirror_and_interlock.GeometryTests.test_two_controllers_and_separate_buses) ... ok
+test_analyzer_detects_injected_and_peer_stop (test_stage21_interlock.InterlockTests.test_analyzer_detects_injected_and_peer_stop) ... ok
+test_analyzer_rejects_false_pass (test_stage21_interlock.InterlockTests.test_analyzer_rejects_false_pass) ... ok
+test_arm_hold_is_required (test_stage21_interlock.InterlockTests.test_arm_hold_is_required) ... ok
+test_audit_recognizes_full_baseline_and_gives_actionable_instructions (test_stage21_interlock.InterlockTests.test_audit_recognizes_full_baseline_and_gives_actionable_instructions) ... ok
+test_audit_rejects_quick_baseline_even_if_one_station (test_stage21_interlock.InterlockTests.test_audit_rejects_quick_baseline_even_if_one_station) ... ok
+test_baseline_worlds_do_not_inject (test_stage21_interlock.InterlockTests.test_baseline_worlds_do_not_inject) ... ok
+test_injection_trigger_and_stop_broadcast (test_stage21_interlock.InterlockTests.test_injection_trigger_and_stop_broadcast) ... ok
+test_only_intended_rail_has_injection (test_stage21_interlock.InterlockTests.test_only_intended_rail_has_injection) ... ok
+test_stage21_and_stage22_worlds_present (test_stage21_interlock.InterlockTests.test_stage21_and_stage22_worlds_present) ... ok
+test_good_synthetic_fixture (test_stage21_quality.AnalyzerTest.test_good_synthetic_fixture) ... ok
+test_missing_side_fails (test_stage21_quality.AnalyzerTest.test_missing_side_fails) ... ok
+test_partial_station_fails (test_stage21_quality.AnalyzerTest.test_partial_station_fails) ... ok
+test_exposure_responds_to_angle_standoff (test_stage21_quality.DepositionUnitTest.test_exposure_responds_to_angle_standoff) ... ok
+test_gated_dose_never_enabled_during_homing_by_source (test_stage21_quality.DepositionUnitTest.test_gated_dose_never_enabled_during_homing_by_source) ... ok
+test_same_model_both_sides_and_monotonic_positive_dose (test_stage21_quality.DepositionUnitTest.test_same_model_both_sides_and_monotonic_positive_dose) ... ok
+test_actual_rails_propagate_far_injection_in_fake_world (test_stage21_rail_protocol_integration.RealRailProtocolTests.test_actual_rails_propagate_far_injection_in_fake_world) ... ok
+test_actual_rails_propagate_near_injection_in_fake_world (test_stage21_rail_protocol_integration.RealRailProtocolTests.test_actual_rails_propagate_near_injection_in_fake_world) ... ok
+test_visible_coat_strictly_gate_controlled (test_stage22_integration_contract.Stage22IntegrationTests.test_visible_coat_strictly_gate_controlled) ... ok
+test_worlds_contain_both_powered_rails (test_stage22_integration_contract.Stage22IntegrationTests.test_worlds_contain_both_powered_rails) ... ok
+test_emitted_geometry_is_balanced_vrml (test_stage22_visual_paint.SurfacePaintTests.test_emitted_geometry_is_balanced_vrml)
+Regression: circular spray marks must not contain an extra '}'. ... ok
+test_fail_closed_and_log (test_stage22_visual_paint.SurfacePaintTests.test_fail_closed_and_log) ... ok
+test_geometry_both_sides (test_stage22_visual_paint.SurfacePaintTests.test_geometry_both_sides) ... ok
+test_reject_invalid_scene_parameters (test_stage22_visual_paint.SurfacePaintTests.test_reject_invalid_scene_parameters) ... ok
+test_counts (test_stage23_overhead.Stage23Tests.test_counts) ... ok
+test_kinematics_and_geometry (test_stage23_overhead.Stage23Tests.test_kinematics_and_geometry) ... ok
+test_requires_measurement (test_stage23_overhead.Stage23Tests.test_requires_measurement) ... ok
+test_world_contains_painter_and_arms (test_stage23_overhead.Stage23Tests.test_world_contains_painter_and_arms) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.108s
+
+OK

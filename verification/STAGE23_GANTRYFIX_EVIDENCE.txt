@@ -1,0 +1,16 @@
+Stage 23 Gantry startup regression repair (2026-10-23)
+
+Observed user-side failure: Z encoder 3.17345m when maxPosition 1.92m;
+Y encoder 0.5754m while homing target Y=0; GANTRY_MOTION_TIMEOUT.
+
+33 Python tests PASS, including:
+- Motor-commanded kinematic Quick mock with finite velocity: 30/30 patches.
+- Regression injection Z encoder 3.17345m during homing: raises
+  GANTRY_ENCODER_OUT_OF_BOUNDS; zero virtual paint; CELL_STOP broadcast sent.
+- Static differences in kinematic default and physical-dynamics experimental.
+- Existing Stage 21/22 controllers and dual-rail simulation regression tests.
+- 10 WBT worlds with balanced braces/brackets and Python AST checks.
+
+NOT run: actual Webots R2025a on macOS (not available in this container).
+Therefore the user's screenshot issue remains unconfirmed as corrected in Webots;
+velocity-mock and static tests are not a replacement for real physics execution.

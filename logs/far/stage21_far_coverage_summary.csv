@@ -1,0 +1,4 @@
+station,raster_targets,pose_passes,valid_virtual_spray_samples,virtual_footprint_events_adding_area,covered_cells,total_cells,local_patch_coverage_percent,coverage_model
+1,15,15,249,91,340,340,100.0,GPS_quality_gated_disc_footprints
+2,15,15,249,91,340,340,100.0,GPS_quality_gated_disc_footprints
+3,15,15,249,92,340,340,100.0,GPS_quality_gated_disc_footprints
