@@ -2,14 +2,6 @@
 
 Tick these **only after observing the user-run Webots R2025a output**. No claim below is prevalidated by the packaged source or offline tests.
 
-## Quick world (one station per side)
-- [ ] `stage21_near_arm` and `stage21_far_arm` both report `PROXY_GUARD_ACTIVE`.
-- [ ] Each physical rail receives `ARM_READY` and reports `PREFLIGHT PASSED`.
-- [ ] 15 `POSE_PASS` outputs from each arm; 15/15 each side and 30/30 combined.
-- [ ] Each raster patch reports nonzero quality-gated relative dose samples and finite CV.
-- [ ] No `SAFETY STOP` or `GUARD STOP` in either console.
-- [ ] Run `python3 tools/analyze_dual_quality.py --mode quick` from project root; valid report written.
-
 ## Full world (three stations per side)
 - [ ] Each arm reports 45 `POSE_PASS` results, across three stations.
 - [ ] Each rail reports 3/3 and motor holds during arm tracking.
