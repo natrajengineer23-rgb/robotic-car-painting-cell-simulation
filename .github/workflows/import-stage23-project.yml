@@ -1,0 +1,65 @@
+name: Import Stage 23 project files
+
+on:
+  push:
+    paths:
+      - '.github/workflows/import-stage23-project.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  unpack-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Expand verified Stage 23 source archive
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path, PurePosixPath
+          import zipfile
+
+          archive = Path('tools/CarPaintingCell_Stage23_SubmissionCandidate.zip')
+          prefix = 'CarPaintingCell_Stage23_SubmissionCandidate/'
+          if not archive.is_file():
+              raise SystemExit(f'Project archive is missing: {archive}')
+
+          added, skipped = [], []
+          with zipfile.ZipFile(archive) as zipped:
+              for member in zipped.infolist():
+                  if member.is_dir() or not member.filename.startswith(prefix):
+                      continue
+                  relative = PurePosixPath(member.filename[len(prefix):])
+                  if not relative.parts or relative.is_absolute() or '..' in relative.parts:
+                      raise SystemExit(f'Unsafe ZIP member: {member.filename}')
+                  if any(p in {'__MACOSX', '__pycache__', '.DS_Store'} for p in relative.parts):
+                      continue
+                  if relative.suffix == '.pyc':
+                      continue
+                  destination = Path(*relative.parts)
+                  if destination.exists():
+                      skipped.append(str(destination))
+                      continue
+                  destination.parent.mkdir(parents=True, exist_ok=True)
+                  destination.write_bytes(zipped.read(member))
+                  added.append(str(destination))
+          print(f'Extracted {len(added)} missing project files; retained {len(skipped)} existing files.')
+          print('\n'.join(added))
+          PY
+
+      - name: Commit restored source folders
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "All Stage 23 project files are already present."
+          else
+            git commit -m "Restore Stage 23 Webots worlds, controllers, tests and logs"
+            git push
+          fi
